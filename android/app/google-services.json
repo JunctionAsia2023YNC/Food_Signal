@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "967376222236",
+    "project_id": "food-signal",
+    "storage_bucket": "food-signal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:967376222236:android:2968d94fe8864b94f007d9",
+        "android_client_info": {
+          "package_name": "com.example.food_signal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "967376222236-iosmi15tkdvoosgsdfcieq3ir4bsbotg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7aLdSFxUXlINrtRC-ebhaYqeJsW8b36A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "967376222236-iosmi15tkdvoosgsdfcieq3ir4bsbotg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
