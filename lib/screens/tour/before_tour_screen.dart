@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:food_signal/controllers/matched_controller.dart';
-import 'package:food_signal/controllers/user_controller.dart';
-import 'package:food_signal/models/matched/matched_model.dart';
-import 'package:food_signal/models/user/user_model.dart';
 import 'package:get/get.dart';
 
 class BeforeTourScreen extends StatefulWidget {
@@ -16,10 +12,6 @@ class BeforeTourScreen extends StatefulWidget {
 class _BeforeTourScreenState extends State<BeforeTourScreen> {
   @override
   Widget build(BuildContext context) {
-    UserController userController = Get.find<UserController>();
-    MatchedController matchedController = Get.put(MatchedController());
-    UserModel user = userController.getUserModel();
-
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
@@ -34,7 +26,7 @@ class _BeforeTourScreenState extends State<BeforeTourScreen> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(height: 150.h),
+              SizedBox(height: 100.h),
               Text(
                 'Have a good time with\nyour Signal Mate:)',
                 textAlign: TextAlign.center,
@@ -45,8 +37,10 @@ class _BeforeTourScreenState extends State<BeforeTourScreen> {
                 ),
               ),
               SizedBox(height: 30.h),
-              InkWell(
-                onTap: () {},
+              GestureDetector(
+                onTap: () {
+                  Get.toNamed('/afterTour');
+                },
                 child: Container(
                   width: 307.w,
                   height: 437.h,

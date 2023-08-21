@@ -59,7 +59,7 @@ class _SelectStationScreenState extends State<SelectStationScreen> {
     final itemList2 = ['Seomyeon', 'Dongrae', 'Busan'];
     final assetList2 = [
       'assets/images/seomyeon_icon.png',
-      'assets/images/donlae_icon.png',
+      'assets/images/dongrae_icon.png',
       'assets/images/busan_icon.png',
       'assets/images/jagalchi_icon.png'
     ];
@@ -110,7 +110,7 @@ class _SelectStationScreenState extends State<SelectStationScreen> {
           final itemList = ['Seomyeon', 'Dongrae', 'Busan'];
           final assetList = [
             'assets/images/seomyeon_icon.png',
-            'assets/images/donlae_icon.png',
+            'assets/images/dongrae_icon.png',
             'assets/images/busan_icon.png',
           ];
 

@@ -51,7 +51,7 @@ class _OnboardingButtonState extends State<OnboardingButton> {
                             userController.setDescription();
                           } else if (progressController.progress.value == 3.0) {
                             Get.toNamed('/color');
-                            // userController.addUser();
+                            userController.addUser();
                           }
                           final newProgress =
                               progressController.progress.value + 1.0;

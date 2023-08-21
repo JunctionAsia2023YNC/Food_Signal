@@ -67,6 +67,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '967376222236',
     projectId: 'food-signal',
     storageBucket: 'food-signal.appspot.com',
+    androidClientId: '967376222236-lan43emrh56ushlkobnmmb1lnl7p4jd8.apps.googleusercontent.com',
     iosClientId: '967376222236-mvjfkvqbhndsbpj5bhiqioervl923p3v.apps.googleusercontent.com',
     iosBundleId: 'com.example.foodSignal',
   );
@@ -77,6 +78,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '967376222236',
     projectId: 'food-signal',
     storageBucket: 'food-signal.appspot.com',
+    androidClientId: '967376222236-lan43emrh56ushlkobnmmb1lnl7p4jd8.apps.googleusercontent.com',
     iosClientId: '967376222236-g84h9c86skiue6k4om4v1lmijn3hj0b9.apps.googleusercontent.com',
     iosBundleId: 'com.example.foodSignal.RunnerTests',
   );

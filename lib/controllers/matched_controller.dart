@@ -49,7 +49,7 @@ class MatchedController extends GetxController {
           if (partnerDocumentSnapshot.exists) {
             Map<String, dynamic> partnerData =
                 partnerDocumentSnapshot.data() as Map<String, dynamic>;
-            // print(partnerData);
+            print(partnerData);
             return MatchedModel.fromJson(partnerData); // UserModel을 적절하게 생성해야 함
           }
         }

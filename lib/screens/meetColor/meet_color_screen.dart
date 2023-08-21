@@ -36,7 +36,7 @@ class _MeetColorScreenState extends State<MeetColorScreen> {
             children: [
               SizedBox(height: 150.h),
               Text(
-                'Your signal mate\nToday at 6 p.m.',
+                'Your signal mate\nToday at 12 p.m.',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontFamily: 'Pretendard Variable',

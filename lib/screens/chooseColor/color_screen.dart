@@ -34,7 +34,7 @@ class _ColorScreenState extends State<ColorScreen> {
             children: [
               SizedBox(height: 150.h),
               Text(
-                'Choose your signal color',
+                'This is your signal color',
                 style: TextStyle(
                   fontFamily: 'Pretendard Variable',
                   fontWeight: FontWeight.w600,

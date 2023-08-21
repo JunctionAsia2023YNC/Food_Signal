@@ -5,6 +5,11 @@ class StationController extends GetxController {
   final FirebaseFirestore _firebaseFirestore = FirebaseFirestore.instance;
   var selectedStation = ''.obs;
   var menuList = [].obs;
+  var img = ''.obs;
+  var trip = ''.obs;
+  var address = ''.obs;
+  var description = ''.obs;
+  var menu = ''.obs;
 
   // 1. station collection에서 필드 station_in과 selectedStation를 비교해서 같은 것을 찾음
   // 2. 같은 것을 찾으면 그 document의 List type인 menuList에 넣어줘야함
@@ -20,6 +25,10 @@ class StationController extends GetxController {
     if (stationQuerySnapshot.docs.isNotEmpty) {
       DocumentSnapshot stationDocumentSnapshot = stationQuerySnapshot.docs[0];
       menuList.value = await stationDocumentSnapshot['menu'];
+      img.value = await stationDocumentSnapshot['img'];
+      trip.value = await stationDocumentSnapshot['trip_in'];
+      address.value = await stationDocumentSnapshot['loc_in'];
+      description.value = await stationDocumentSnapshot['explain_in'];
 
       // menuList를 활용하여 필요한 작업을 수행
       // 예를 들어, setState를 사용하여 화면에 표시하거나 다른 로직을 실행할 수 있음
@@ -29,7 +38,11 @@ class StationController extends GetxController {
     }
   }
 
-  void setSelectedStaion(String value) {
+  void setSelectedStation(String value) {
     selectedStation.value = value;
+  }
+
+  void setMenu(int index) {
+    menu.value = menuList[index];
   }
 }

@@ -10,6 +10,7 @@ class UserController extends GetxController {
   var userDescription = [].obs;
   var selectedMyGender = ''.obs;
   var selectedYourGender = ''.obs;
+  var matched = false.obs;
 
   final FirestoreService _firestoreService = FirestoreService.instance;
   final FirebaseFirestore _firebaseFirestore = FirebaseFirestore.instance;
@@ -75,6 +76,20 @@ class UserController extends GetxController {
     return userModel;
   }
 
+  Future<void> checkMatched() async {
+    QuerySnapshot checkQuerySnapshot = await _firebaseFirestore
+        .collection('user')
+        .where('userName', isEqualTo: userName)
+        .where('partner_uid', isNotEqualTo: null)
+        .get();
+
+    if (checkQuerySnapshot.docs.isNotEmpty) {
+      matched.value = true;
+    } else {
+      matched.value = false;
+    }
+  }
+
   void updateUserName(String value) {
     userName.value = value;
   }
@@ -87,42 +102,3 @@ class UserController extends GetxController {
     selectedYourGender.value = gender;
   }
 }
-// final Rx<UserModel> _userModel = UserModel(
-//   uid: '',
-//   name: '',
-//   gender: '',
-//   meetGender: '',
-//   partnerUid: '',
-//   station: '',
-//   stationEng: '',
-// ).obs;
-// var userName = ''.obs;
-// var selectedMyGender = ''.obs;
-// var selectedYourGender = ''.obs;
-
-// UserModel get user => _userModel.value;
-
-// set user(UserModel value) => _userModel.value = value;
-
-// void clear() {
-//   _userModel.value = UserModel(
-//     uid: '',
-//     name: '',
-//     gender: '',
-//     meetGender: '',
-//     partnerUid: '',
-//     station: '',
-//     stationEng: '',
-//   );
-// }
-
-// Future getUserFromDB(String uid) async {
-//   try {
-//     var userData = await _firestoreService.collection("user").doc(uid).get();
-//     var map = userData.data();
-//     //debugPrint(map!['email']);
-//     return UserModel.fromData(userData.data());
-//   } on FirebaseException catch (e) {
-//     return e.message;
-//   }
-// }

@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:food_signal/controllers/user_controller.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 
@@ -13,11 +14,14 @@ class MatchingScreen extends StatefulWidget {
 }
 
 class _MatchingScreenState extends State<MatchingScreen> {
+  final UserController userController = Get.put(UserController());
+
   @override
   void initState() {
     super.initState();
     // 3초 후에 다음 페이지로 이동
-    Timer(Duration(seconds: 3), () {
+
+    Timer(Duration(seconds: 20), () {
       Get.toNamed('/meetColor');
     });
   }

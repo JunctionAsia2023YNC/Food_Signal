@@ -14,7 +14,15 @@
       },
       "oauth_client": [
         {
-          "client_id": "967376222236-iosmi15tkdvoosgsdfcieq3ir4bsbotg.apps.googleusercontent.com",
+          "client_id": "967376222236-lan43emrh56ushlkobnmmb1lnl7p4jd8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.food_signal",
+            "certificate_hash": "cfae6f8057d49a9196ab41116238d2ee4999b17d"
+          }
+        },
+        {
+          "client_id": "967376222236-if6tn5sb6g4ahcrl6o4hudrht6rqq2f0.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -27,8 +35,15 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "967376222236-iosmi15tkdvoosgsdfcieq3ir4bsbotg.apps.googleusercontent.com",
+              "client_id": "967376222236-if6tn5sb6g4ahcrl6o4hudrht6rqq2f0.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "967376222236-g84h9c86skiue6k4om4v1lmijn3hj0b9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.foodSignal.RunnerTests"
+              }
             }
           ]
         }

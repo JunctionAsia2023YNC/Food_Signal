@@ -7,6 +7,7 @@ import 'package:food_signal/screens/meetColor/meet_color_screen.dart';
 import 'package:food_signal/screens/onbording/onboarding_screen.dart';
 import 'package:food_signal/screens/recommend/recommend_screen.dart';
 import 'package:food_signal/screens/selectStation/select_station_screen.dart';
+import 'package:food_signal/screens/tour/after_tour_screen.dart';
 import 'package:food_signal/screens/tour/before_tour_screen.dart';
 import 'package:get/get.dart';
 
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
           GetPage(name: '/matching', page: () => MatchingScreen()),
           GetPage(name: '/meetColor', page: () => MeetColorScreen()),
           GetPage(name: '/beforeTour', page: () => BeforeTourScreen()),
+          GetPage(name: '/afterTour', page: () => AfterTourScreen()),
         ],
       ),
     );

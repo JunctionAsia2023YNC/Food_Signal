@@ -2,6 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:food_signal/controllers/matched_controller.dart';
+import 'package:food_signal/controllers/matching_controller.dart';
 import 'package:food_signal/controllers/station_controller.dart';
 
 import 'package:get/get.dart';
@@ -15,6 +17,7 @@ class RecommendScreen extends StatefulWidget {
 
 class _RecommendScreenState extends State<RecommendScreen> {
   final StationController stationController = Get.put(StationController());
+  final MatchingController matchingController = Get.put(MatchingController());
   int randomIndex = 0;
 
   @override
@@ -100,6 +103,7 @@ class _RecommendScreenState extends State<RecommendScreen> {
                           randomIndex =
                               random.nextInt(stationController.menuList.length);
                         });
+                        stationController.setMenu(randomIndex.floor());
                       },
                       child: Text(
                         'Again',
@@ -125,6 +129,7 @@ class _RecommendScreenState extends State<RecommendScreen> {
                       ),
                       onPressed: () {
                         Get.toNamed('/matching');
+                        matchingController.addValueToMatchingDocument();
                       },
                       child: Text(
                         'Good',
